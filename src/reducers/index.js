@@ -3,7 +3,7 @@ import AuthReducer from './AuthReducer';
 
 const appReducer = combineReducers({
 	state: (state = {}) => state,
-	userInfo: AuthReducer
+	auth: AuthReducer
 });
 
 const rootReducer = (state, action) => {
