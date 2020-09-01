@@ -1,0 +1,222 @@
+.ant-layout-sider-children {
+	background: #171c23;
+	height: 100vh;
+}
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+	color: rgba(255, 255, 255, 0.65);
+	background: #171c23;
+	text-align: left;
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+	background-color: #f0c108;
+}
+
+li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+	background: #2b3139;
+}
+
+span.anticon.anticon-menu.trigger {
+	margin-left: 10px;
+	font-size: 22px;
+}
+header.ant-layout-header.site-layout-background {
+	background: #3c424b;
+	height: 55px;
+	color: #fff;
+	padding-right: 10px !important;
+}
+.logo-container {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0 15px 0;
+}
+
+img.logo {
+	width: 60%;
+	margin: auto;
+}
+.site-label {
+	background: #2b3139;
+	color: #fff;
+	height: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+	border-right: 0;
+}
+.site-label li {
+	pointer-events: none;
+	cursor: default;
+	line-height: 1px !important;
+	padding-top: 5px !important;
+}
+.site-label > span {
+	margin-right: 10px;
+}
+ul.site-label li span {
+	color: #fff !important;
+}
+.site-label span:nth-child(2) {
+	font-size: 16px !important;
+}
+.ant-menu-vertical .ant-menu-item:not(:last-child),
+.ant-menu-vertical-left .ant-menu-item:not(:last-child),
+.ant-menu-vertical-right .ant-menu-item:not(:last-child),
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+	margin-bottom: 0px !important;
+}
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+	margin-bottom: 0 !important;
+}
+/* li.ant-menu-item.ant-menu-item-only-child.ant-menu-item-selected {
+	background: transparent !important;
+}
+
+li.ant-menu-item.ant-menu-item-only-child:before {
+	content: "";
+	background: #6b7076;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	border-radius: 100px;
+}
+li.ant-menu-item.ant-menu-item-only-child.ant-menu-item-selected:before {
+	background: #f0c108;
+} */
+/* MOBILE */
+.bars-menu-holder {
+	display: inline-block;
+}
+.bars-menu {
+	float: left;
+	height: 32px;
+	padding: 6px;
+	margin: 9px;
+	display: none;
+	background: none;
+	border-color: #f0c108;
+}
+.bars-btn {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #f0c108;
+	position: relative;
+}
+.bars-btn:after,
+.bars-btn:before {
+	content: attr(x);
+	width: 20px;
+	position: absolute;
+	top: -6px;
+	left: 0;
+	height: 2px;
+	background: #f0c108;
+}
+.bars-btn:after {
+	top: auto;
+	bottom: -6px;
+}
+.ant-drawer-content,
+.ant-drawer-header {
+	background-color: #171c23;
+}
+.ant-drawer-body {
+	padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
+	display: inline-block;
+	width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal {
+	border-bottom: none;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
+	border-bottom-color: transparent;
+}
+/* END MOBILE */
+.web-menu-btn {
+	color: #fff;
+	position: relative;
+}
+
+/* .web-menu-btn:after {
+	content: "";
+	position: absolute;
+	right: -11px;
+	top: 1px;
+	width: 1px;
+	background: #fff;
+	height: 29px;
+} */
+
+.right-container {
+	float: right;
+	display: inline-block;
+	height: 50px;
+	padding: 0px 5px 7px 8px;
+	width: 80%;
+	text-align: right;
+	position: relative;
+}
+.inner-right {
+	position: absolute;
+	display: block;
+	top: -4px;
+	right: 0;
+}
+.inner-right > span {
+	margin: 5px !important;
+}
+.right-container .inner-right > span {
+	display: inline-block;
+	margin: 0px 5px 7px 0px;
+}
+.ant-avatar > img {
+	background: transparent;
+}
+.name-dropdown {
+	background: transparent;
+	color: #fff;
+	border: none;
+	margin-bottom: 5px !important;
+}
+.name-dropdown:hover,
+.name-dropdown:focus {
+	background: transparent;
+	color: #fff;
+}
+@media (min-width: 992px) {
+	.ant-drawer-left.ant-drawer-open,
+	.ant-drawer-right.ant-drawer-open,
+	.ant-drawer.ant-drawer-open .ant-drawer-mask,
+	.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	.ant-drawer .ant-drawer-right .ant-drawer-open {
+	}
+	.web-menu,
+	.web-menu-btn {
+		display: none;
+	}
+	.bars-menu {
+		display: block;
+	}
+
+	img.logo {
+		width: 35%;
+	}
+}

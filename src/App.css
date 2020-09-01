@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,232 @@
   to {
     transform: rotate(360deg);
   }
+} */
+@import "~antd/dist/antd.css";
+.acc-btn.btn-default:hover {
+	background-color: #d9d9d9;
+	border-color: #d9d9d9;
+	color: #fff;
+}
+.acc-btn.btn-danger:hover {
+	background-color: #ff4d4f;
+	color: #fff;
+}
+.acc-btn.btn-primary {
+	border: 1px solid #007bff;
+	color: #007bff;
+}
+.acc-btn.btn-primary:hover {
+	background: #007bff;
+	color: #fff;
+}
+.acc-btn.btn-success {
+	border: 1px solid #28a745;
+	color: #28a745;
+}
+.acc-btn.btn-success:hover {
+	background: #28a745;
+	color: #fff;
+}
+.ant-modal-header {
+	background: #f0c108;
+	color: #fff;
+}
+.modal-header p {
+	margin: 0;
+}
+.ant-modal-title {
+	color: #fff;
+}
+span.ant-modal-close-x span {
+	color: #fff;
+}
+main.ant-layout-content.site-layout-background {
+	margin: 0 !important;
+}
+.module-title {
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-bottom: 0px;
+}
+.module-subtitle {
+	color: rgb(181, 181, 181);
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-bottom: 24px;
+	display: block;
+}
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+	padding: 13px 16px;
+}
+.acc-card-title {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.buttons-right-holder {
+	text-align: right;
+}
+
+.buttons-right-holder button {
+	margin: 0 0 0 6px;
+}
+/* DASHBOARD */
+.ant-card-body {
+	padding: 15px 24px;
+}
+.recent-holder .ant-card-body {
+	padding: 24px 20px;
+}
+.recent-holder-wrapper {
+	padding: 30px 15px 30px 12px;
+	overflow: hidden;
+}
+
+.recent-holder .ant-card-body {
+	padding: 24px 20px;
+}
+.card-holder {
+	display: block;
+	vertical-align: middle;
+}
+
+.card-icon {
+	display: inline-block;
+	width: 20%;
+	vertical-align: middle;
+	font-size: 16px;
+	text-align: center;
+	border: 1px solid #53da96;
+	border-radius: 100%;
+	height: 35px;
+	width: 35px;
+	padding: 3px;
+	color: #53da96;
+}
+
+.card-details {
+	display: inline-block;
+	width: 80%;
+	vertical-align: middle;
+	padding-left: 19px;
+}
+
+.card-details .card-count {
+	color: #8be6b8;
+	margin-bottom: 0px !important;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 400;
+}
+.card-details span {
+	font-size: 12px;
+}
+.recent-holder .ant-card-head {
+	background: #f0c108;
+	color: #fff;
+	font-weight: 400;
+	font-size: 17px;
+}
+.recent-holder .recent-name,
+.recent-holder .recent-details {
+	font-size: 12px;
+	white-space: nowrap;
+}
+.recent-holder small {
+	display: block;
+	font-size: 9.5px;
+}
+.recent-holder .ant-timeline-item-head {
+	border: 1px solid;
+	border-radius: 100%;
+	padding: 9px;
+}
+.ant-timeline-item-content {
+	padding-left: 10px;
+}
+.table-holder table thead tr th {
+	background: #f0c108 !important;
+	color: #fff;
+}
+.table-holder span.ant-dropdown-trigger span {
+	color: #fff;
+}
+
+.ant-pagination-item-active {
+	border-color: #f0c108;
+	background: #f0c108;
+	transition: 300ms all ease-in-out;
+}
+.ant-pagination-item,
+.ant-pagination-prev a,
+.ant-pagination-next a {
+	border-color: #f0c108 !important;
+	transition: 300ms all ease-in-out;
+}
+.ant-pagination-item-active a {
+	color: #ffffff;
+}
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:hover,
+.ant-pagination-item:focus,
+.ant-pagination-item:hover {
+	background: #f0c108;
+	border-color: #f0c108;
+	color: #fff;
+}
+.ant-pagination-prev a:hover span,
+.ant-pagination-next a:hover span {
+	color: #f0c108;
+}
+.ant-pagination-item-active:focus a,
+.ant-pagination-item-active:hover a,
+.ant-pagination-item:focus a,
+.ant-pagination-item:hover a {
+	color: #fff;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+	background-color: #fdcc07;
+	border-color: #fecd07;
+}
+.ant-checkbox-checked .ant-checkbox-inner:focus,
+.ant-checkbox-checked .ant-checkbox-inner:hover,
+.ant-checkbox-inner:hover,
+.ant-checkbox-inner:focus,
+.ant-checkbox.ant-checkbox-checked:hover,
+.ant-checkbox.ant-checkbox-checked:focus,
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner {
+	border-color: #f0c108;
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+	background-color: #f0c108;
+}
+@media (max-width: 1219px) {
+	img.logo {
+		width: 50%;
+	}
+	.site-label ul li span {
+		font-size: 10px;
+	}
+
+	.web-menu li span,
+	.web-menu ul li {
+		font-size: 12px !important;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+@media (max-width: 991px) {
+	.acc-col {
+		width: 100%;
+		display: block;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 16px;
+	}
 }

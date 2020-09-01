@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 
 import * as actions from '../../actions';
 import logo from '../../assets/images/logo-acc.png';
@@ -25,7 +26,7 @@ const Login = () => {
             <span className="acc-pre-add-on"><i className="fa fa-lock"></i></span>		
             <input type="password" name="username" placeholder="Password" className="acc-input-form" />
           </div>
-          <input type="submit" className="acc-btn acc-btn-login transition" />
+          <Link to="/dashboard" className="acc-btn acc-btn-login transition">Login</Link>
           <span className="forgot-text">Forgot password?</span>
           <p className="copyright">&copy; 2020 ACC. All rights reserved.</p>
         </form>
