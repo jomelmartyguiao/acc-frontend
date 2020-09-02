@@ -60,6 +60,9 @@ const MenuComponent = () => {
 					<Menu.Item key="4" icon={<MonitorOutlined />}>
 						Monitoring
 					</Menu.Item>
+					<Menu.Item key="5" icon={<MonitorOutlined />}>
+						<Link to="/uploader"><span>Uploader</span></Link>
+					</Menu.Item>
 				</Menu>
 			</div>
 		</Fragment>

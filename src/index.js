@@ -12,6 +12,7 @@ import "antd/dist/antd.css";
 import fontawesome from './assets/css/font-awesome.min.css';
 import general from './assets/css/general-style.css';
 import style from './assets/css/style.css';
+import styleCopy from './assets/css/styleCopy.css';
 import menucomponent from './assets/css/menucomponent.css';
 
 const middleware = [ReduxThunk];
@@ -23,6 +24,7 @@ ReactDOM.render(
     <Router history={history}>
       <App>
         <link href={style} rel="stylesheet" type="text/css" />
+        <link href={styleCopy} rel="stylesheet" type="text/css" />
         <link href={general} rel="stylesheet" type="text/css" />
         <link href={fontawesome} rel="stylesheet" type="text/css" />
         <link href={menucomponent} rel="stylesheet" type="text/css" />
