@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Menu, Button } from "antd";
+import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo-acc.png";
 import {
@@ -17,17 +17,17 @@ const MenuComponent = () => {
 	const toggleCollapsed = () => {
 		setCollapsed(!collapsed)
 	};
-	const navigateToDashboard = () => {
-		window.location.assign("http://localhost:3000/dashboard");
-	};
+	// const navigateToDashboard = () => {
+	// 	window.location.assign("http://localhost:3000/dashboard");
+	// };
 	const navigateToPages = () => {
 		window.location.assign("http://localhost:3000/pagecreation");
 	};
 
 	return (
 		<Fragment>
-			<div className="logo-container">
-				<img className="logo" src={Logo}></img>
+			<div className="logo-container" onClick={toggleCollapsed}>
+				<img className="logo" alt="logo" src={Logo}></img>
 			</div>
 			<Menu className="site-label">
 				<Menu.Item disabled>
@@ -43,8 +43,7 @@ const MenuComponent = () => {
 					inlineCollapsed={collapsed}
 				>
 					<Menu.Item key="1" icon={<DashboardOutlined />}>
-						{/* <Link to="/dashboard"><span>Dashboard</span></Link> */}
-						<span>Dashboard</span>
+						<Link to="/dashboard"><span>Dashboard</span></Link>
 					</Menu.Item>
 					<SubMenu key="sub1" icon={<FileOutlined />} title="Pages">
 						<Menu.Item key="5" onClick={navigateToPages}>

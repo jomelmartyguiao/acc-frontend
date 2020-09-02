@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Card, Col, Row, List, Icon, Timeline, Table, Tag, Space } from "antd";
+import { Card, Col, Row, List, Timeline, Table } from "antd";
 import {
 	FileTextOutlined,
 	PushpinOutlined,
