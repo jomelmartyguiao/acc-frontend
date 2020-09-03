@@ -1,24 +1,14 @@
 import React, { Component } from "react";
 import { Layout, Menu, Dropdown } from "antd";
-import MenuComponent from "./MenuComponent";
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer, Button, Avatar, Divider } from "antd";
 import { DownOutlined, UserOutlined, GlobalOutlined, TableOutlined } from "@ant-design/icons";
+
 import Logo from "../../assets/images/logo-acc.png";
+import MenuComponent from "./MenuComponent";
+import history from '../Shared/history';
+
 const { Header, Sider, Content } = Layout;
-const menu = (
-	<Menu>
-		<Menu.Item key="1" icon={<UserOutlined />}>
-			1st menu item
-		</Menu.Item>
-		<Menu.Item key="2" icon={<UserOutlined />}>
-			2nd menu item
-		</Menu.Item>
-		<Menu.Item key="3" icon={<UserOutlined />}>
-			3rd item
-		</Menu.Item>
-	</Menu>
-);
 
 export default class BodyComponentConsolidator extends Component {
 	state = {
@@ -43,6 +33,27 @@ export default class BodyComponentConsolidator extends Component {
 		});
 	};
 
+	logout = () => {
+		localStorage.clear()
+		history.push('/login')
+	}
+
+	menu = () => {
+		return(
+			<Menu>
+				<Menu.Item key="1" icon={<UserOutlined />}>
+					1st menu item
+				</Menu.Item>
+				<Menu.Item key="2" icon={<UserOutlined />}>
+					2nd menu item
+				</Menu.Item>
+				<Menu.Item key="3" onClick={this.logout }icon={<UserOutlined />}>
+					Logout
+				</Menu.Item>
+			</Menu>
+		);
+	}
+
 	render() {
 		return (
 			<Layout>
@@ -66,7 +77,7 @@ export default class BodyComponentConsolidator extends Component {
 								<TableOutlined />
 								<GlobalOutlined />
 								<Divider type="vertical" />
-								<Dropdown trigger="click" className="name-dropdown" overlay={menu}>
+								<Dropdown trigger="click" className="name-dropdown" overlay={this.menu}>
 									<Button>
 										John Doe <DownOutlined />
 									</Button>

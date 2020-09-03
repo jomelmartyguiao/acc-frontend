@@ -7,8 +7,8 @@ import {
 	FileOutlined,
 	PushpinOutlined,
 	BookOutlined,
-	MonitorOutlined,
 	HomeOutlined,
+	NotificationFilled
 } from "@ant-design/icons";
 const { SubMenu } = Menu;
 const MenuComponent = () => {
@@ -16,12 +16,6 @@ const MenuComponent = () => {
 
 	const toggleCollapsed = () => {
 		setCollapsed(!collapsed)
-	};
-	// const navigateToDashboard = () => {
-	// 	window.location.assign("http://localhost:3000/dashboard");
-	// };
-	const navigateToPages = () => {
-		window.location.assign("http://localhost:3000/pagecreation");
 	};
 
 	return (
@@ -36,8 +30,8 @@ const MenuComponent = () => {
 			</Menu>
 			<div>
 				<Menu
-					defaultSelectedKeys={["5"]}
-					defaultOpenKeys={["sub1"]}
+					defaultSelectedKeys={["1"]}
+					// defaultOpenKeys={["sub1"]}
 					mode="inline"
 					theme="dark"
 					inlineCollapsed={collapsed}
@@ -45,20 +39,20 @@ const MenuComponent = () => {
 					<Menu.Item key="1" icon={<DashboardOutlined />}>
 						<Link to="/dashboard"><span>Dashboard</span></Link>
 					</Menu.Item>
+					<Menu.Item key="7" icon={<NotificationFilled />}>
+						<Link to="/announcements"><span>Announcements</span></Link>
+					</Menu.Item>
 					<SubMenu key="sub1" icon={<FileOutlined />} title="Pages">
-						<Menu.Item key="5" onClick={navigateToPages}>
-							Page Creation
+						<Menu.Item key="5">
+							<Link to="/page"><span>Page</span></Link>
 						</Menu.Item>
-						<Menu.Item key="6">Publish</Menu.Item>
+						{/* <Menu.Item key="6">Publish</Menu.Item> */}
 					</SubMenu>
 					<Menu.Item key="2" icon={<PushpinOutlined />}>
-						Post
+						<Link to="/posts"><span>Posts</span></Link>
 					</Menu.Item>
 					<Menu.Item key="3" icon={<BookOutlined />}>
-						Readings
-					</Menu.Item>
-					<Menu.Item key="4" icon={<MonitorOutlined />}>
-						Monitoring
+						<Link to="/readings"><span>Readings</span></Link>
 					</Menu.Item>
 				</Menu>
 			</div>
