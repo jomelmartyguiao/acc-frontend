@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import cta1 from '../../assets/images/cta1.jpg';
-// import cta2 from '../../assets/images/cta2.jpg';
+import cta1 from '../../assets/images/cta1.jpg';
+import cta2 from '../../assets/images/cta2.jpg';
 import cta3 from '../../assets/images/cta3.jpg';
-import vid from '../../assets/images/sampleVideo.mp4';
 
-export const RegionBody = ({ region }) => {
-  const cta1 = localStorage.getItem('image1');
-  const regionStorage = localStorage.getItem('region');
-  const title = localStorage.getItem('title');
-  const description = localStorage.getItem('description');
+export const Central = ({ region, from }) => {
   return (
     <div className="body-ip">
       <div className="body-wrapper">
@@ -19,29 +14,28 @@ export const RegionBody = ({ region }) => {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item"><Link to='/home'>Home</Link></li>
-              <li className="breadcrumb-item">Regions</li>
-              <li className="breadcrumb-item active" aria-current="page">Region {region}</li>
+              <li className="breadcrumb-item">Central</li>
+              <li className="breadcrumb-item active" aria-current="page">Cenral</li>
             </ol>
           </nav>
           <div className="cta-wrapper">
-            {regionStorage === 'true' && <div className="row mb-2">
+            <div className="row mb-2">
               <div className="col-lg-4 col-md-4 post-thumbnail transition">
                 <div className="cta-img-holder transition">
                   <img src={cta1} style={{ width: '310', height: 'auto' }} alt="ct1" />
                 </div>
               </div>
               <div className="col-lg-8 col-md-8">
-                <p className="cta-title title transition">{title}</p>
+                <p className="cta-title title transition">Title 1</p>
                 <p className="publish-date-lbl body-text">Published on <span>August 01,2020</span></p>
-                <p className="body-text">{description}</p>
+                <p className="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <Link to="/read-more" className="btn btn-outline-warning btn-ip-more">Read More</Link>
               </div>
-            </div>}
+            </div>
             <div className="row mb-2">
               <div className="col-lg-4 col-md-4 post-thumbnail transition">
                 <div className="cta-img-holder transition">
-                  {/* <img src={cta2} style={{ width: '310', height: 'auto' }} alt="ct2" /> */}
-                  <video src={vid} width="310" height="251" autoPlay="true" />
+                  <img src={cta2} style={{ width: '310', height: 'auto' }} alt="ct2" />
                 </div>
               </div>
               <div className="col-lg-8 col-md-8">

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import uploadcare from 'uploadcare-widget';
-import { Button } from "antd";
+import { PlusOutlined } from "@ant-design/icons";
+import { Upload } from "antd";
 // import uploadcareTabEffects from 'uploadcare-widget-tab-effects';
 
 class Uploader extends PureComponent {
@@ -69,17 +70,33 @@ class Uploader extends PureComponent {
   };
 
   render() {
-    const { label } = this.props;
-    const { progress, isUploading } = this.state;
+    const { fileList } = this.props;
+    // const { progress, isUploading } = this.state;
+    const uploadButton = (
+      <div>
+          <PlusOutlined />
+          <div style={{ marginTop: 8 }}>Upload</div>
+      </div>);
     return (
-      <Button onClick={this.handleUpload} data-input-accept-types="image/jpg">
-        {isUploading ? (
-          <div>
-            <span> Uploading ({progress}%)...</span>
-          </div>
-          ) : (
-          <div>{label}</div>
-      )}</Button>
+      // <Button onClick={this.handleUpload} data-input-accept-types="image/jpg">
+      //   {isUploading ? (
+      //     <div>
+      //       <span> Uploading ({progress}%)...</span>
+      //     </div>
+      //     ) : (
+      //     <div>{label}</div>
+      // )}</Button>
+      <Upload
+        // action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        listType="picture-card"
+        fileList={fileList}
+        // onPreview={handlePreview}
+        // onChange={handleChange}
+        onClick={this.handleUpload}
+        multiple={true}
+        className="mt-3">
+        {uploadButton}
+      </Upload>
     );
   }
 }

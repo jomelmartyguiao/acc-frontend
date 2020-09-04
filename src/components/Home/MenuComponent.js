@@ -45,13 +45,17 @@ const MenuComponent = () => {
 					</Menu.Item>
 					<SubMenu key="sub1" icon={<FileOutlined />} title="Pages">
 						<Menu.Item key="3">
-							<Link to="/page"><span>Page</span></Link>
+							<Link to="/page"><span>Pages</span></Link>
 						</Menu.Item>
-						{/* <Menu.Item key="6">Publish</Menu.Item> */}
 					</SubMenu>
-					<Menu.Item key="4" icon={<PushpinOutlined />}>
-						<Link to="/posts"><span>Posts</span></Link>
-					</Menu.Item>
+					<SubMenu key="sub2" icon={<PushpinOutlined />} title="Posts">
+						<Menu.Item key="4">
+							<Link to="/posts"><span>Published</span></Link>
+						</Menu.Item>
+						<Menu.Item key="7">
+							<Link to="/posts"><span>Archived</span></Link>
+						</Menu.Item>
+					</SubMenu>
 					<Menu.Item key="5" icon={<BookOutlined />}>
 						<Link to="/readings"><span>Readings</span></Link>
 					</Menu.Item>

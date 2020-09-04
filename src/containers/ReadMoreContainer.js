@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { RegionBody } from '../components/Region/RegionComponents';
 import { Navigation } from '../components/Shared/Navigation';
+import { ReadMore } from '../components/Region/ReadMore';
 
-class RegionContainer extends Component {
+class ReadMoreContainer extends Component {
   render() {
     return (
       <React.Fragment>
         <Navigation from='Region' region={this.props.id} />
-        <RegionBody from='Region' region={this.props.id} />
+        <ReadMore from='image' />
       </React.Fragment>
     );
   }
@@ -19,7 +19,7 @@ class RegionContainer extends Component {
 const mapStateToProps = (state, routeParams) => {
 	return {
 		id: routeParams.match.params.id,
-		 };
+	};
 };
 
-export default withRouter(connect( mapStateToProps, null )(RegionContainer));
+export default withRouter(connect( mapStateToProps, null )(ReadMoreContainer));

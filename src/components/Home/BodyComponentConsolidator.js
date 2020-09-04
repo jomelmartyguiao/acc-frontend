@@ -79,7 +79,7 @@ export default class BodyComponentConsolidator extends Component {
 								<Divider type="vertical" />
 								<Dropdown trigger="click" className="name-dropdown" overlay={this.menu}>
 									<Button>
-										John Doe <DownOutlined />
+										Admin <DownOutlined />
 									</Button>
 								</Dropdown>
 								<Avatar src={Logo} />

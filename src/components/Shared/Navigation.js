@@ -5,7 +5,6 @@ import logo from '../../assets/images/logo-acc.png';
 import header from '../../assets/images/header1.jpg';
 
 export const Navigation = ({ from, region }) => {
-	console.log("from: ", from)
   return (
   <div className="header-wrapper transition">
 		<div className="header-nav transition">
@@ -22,7 +21,7 @@ export const Navigation = ({ from, region }) => {
 			        <Link className="nav-link" to="/home">Home <span className="sr-only">(current)</span></Link>
 			      </li>
 			      <li className="nav-item">
-			        <Link className="nav-link" to="/">Central</Link>
+			        <Link className="nav-link" to="/central">Central</Link>
 			      </li>
 			      <li className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -55,7 +54,7 @@ export const Navigation = ({ from, region }) => {
 				<img src={header} alt="header" />
 			</div>
 		: <div className="header-ip">
-				<p className="header-title">Region {region}</p>
+				<p className="header-title">{from} {region}</p>
 				<img src={header} alt="header" />
 			</div>}	
 	</div>

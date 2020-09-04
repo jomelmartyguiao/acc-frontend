@@ -202,7 +202,7 @@ export default class Dashboard extends Component {
 									<Timeline>
 										<Timeline.Item dot={<UserAddOutlined className="timeline-icons color-green" />} color="green">
 											<span className="recent-details">
-												<b className="recent-name">John Doe,</b>started following you on Instagram
+												<b className="recent-name">Jomel, </b>started following you on Instagram
 											</span>
 											<small>4 hours ago</small>
 										</Timeline.Item>

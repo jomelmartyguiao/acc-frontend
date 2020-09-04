@@ -209,23 +209,37 @@ export default class Posts extends Component {
 								)}
 							/>
 							<Card bordered={false}>
-								<Row>
+								<Row className="mb-3">
 									<Col span={12}>
 										<div className="acc-card-title">
-											<p>LIST OF POSTS</p>
+											<p className="mb-0">LIST OF POSTS</p>
 										</div>
 									</Col>
 									<Col span={12}>
 										<div className="buttons-right-holder">
 											<Button danger className="acc-btn btn-danger" icon={<DeleteFilled />}>
-												Delete
+												Archive
 											</Button>
-											<Link to="/readings/new-reading">
+											<Link to="/posts/new-post">
 												<Button className="acc-btn btn-success" icon={<FormOutlined />} to="/posts/new-post">
 													New
 												</Button>
 											</Link>
 										</div>
+									</Col>
+								</Row>
+								<Row className="mb-3">
+									<Col span={9}>
+										<Select className="" defaultValue="regionI" style={{ width: '100%' }} onChange={this.handleChange}>
+											<Option value="regionI">Central</Option>
+											<Option value="regionI">Region I</Option>
+											<Option value="regionII">Region II</Option>
+											<Option value="regionIII">Region III</Option>
+											<Option value="regionII">Region IV</Option>
+											<Option value="regionIII">Region V</Option>
+											<Option value="regionII">Region VI</Option>
+											<Option value="regionIII">Region VII</Option>
+										</Select>
 									</Col>
 								</Row>
 								<Table className="table-holder" rowSelection={rowSelection} columns={columns} dataSource={dataSource} />

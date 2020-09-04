@@ -209,10 +209,10 @@ export default class Announcement extends Component {
 								)}
 							/>
 							<Card bordered={false}>
-								<Row>
+								<Row className="mb-3">
 									<Col span={12}>
 										<div className="acc-card-title">
-											<p>LIST OF ANNOUNCEMENTS</p>
+											<p className="mb-0">LIST OF ANNOUNCEMENTS</p>
 										</div>
 									</Col>
 									<Col span={12}>
@@ -224,6 +224,20 @@ export default class Announcement extends Component {
 												New
 											</Button>
 										</div>
+									</Col>
+								</Row>
+								<Row className="mb-3">
+									<Col span={9}>
+										<Select className="" defaultValue="regionI" style={{ width: '100%' }} onChange={this.handleChange}>
+											<Option value="regionI">Central</Option>
+											<Option value="regionI">Region I</Option>
+											<Option value="regionII">Region II</Option>
+											<Option value="regionIII">Region III</Option>
+											<Option value="regionII">Region IV</Option>
+											<Option value="regionIII">Region V</Option>
+											<Option value="regionII">Region VI</Option>
+											<Option value="regionIII">Region VII</Option>
+										</Select>
 									</Col>
 								</Row>
 								<Table className="table-holder" rowSelection={rowSelection} columns={columns} dataSource={dataSource} />

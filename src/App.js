@@ -6,11 +6,14 @@ import BodyComponentConsolidator from './components/Home/BodyComponentConsolidat
 import DashboardContainer from './containers/DashboardContainer';
 import HomeContainer from './containers/HomeContainer';
 import RegionContainer from './containers/RegionContainer';
+import CentralContainer from './containers/CentralContainer';
 import UploaderContainer from './containers/UploaderContainer';
 import AnnouncementsContainer from './containers/AnnouncementsContainer';
 import PageContainer from './containers/PageContainer';
 import PostsContainer from './containers/PostsContainer';
 import ReadingsContainer from './containers/ReadingsContainer';
+import ReadMoreContainer from './containers/ReadMoreContainer';
+import VideoContainer from './containers/VideoContainer';
 
 import { Footer } from './components/Shared/Footer';
 import NewPage from './components/Page/NewPage';
@@ -25,6 +28,9 @@ function App() {
       <PublicRoute path="/login/" exact component={Login} />
       <HomeRoute path="/home/" exact component={HomeContainer} />
       <HomeRoute path="/region/:id" exact component={RegionContainer} />
+      <HomeRoute path="/central/" exact component={CentralContainer} />
+      <HomeRoute path="/read-more/" exact component={ReadMoreContainer} />
+      <HomeRoute path="/read-more/video" exact component={VideoContainer} />
       <PrivateRoute path="/uploader/" exact component={UploaderContainer} />
 			<PrivateRoute path="/dashboard/" exact component={DashboardContainer} />
       <PrivateRoute path="/announcements/" exact component={AnnouncementsContainer} />

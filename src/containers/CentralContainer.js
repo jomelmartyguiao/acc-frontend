@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { RegionBody } from '../components/Region/RegionComponents';
+import { Central } from '../components/Region/Central';
 import { Navigation } from '../components/Shared/Navigation';
 
-class RegionContainer extends Component {
+class CentralContainer extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navigation from='Region' region={this.props.id} />
-        <RegionBody from='Region' region={this.props.id} />
+        <Navigation from='Central' region={this.props.id} />
+        <Central from='Central' region={this.props.id} />
       </React.Fragment>
     );
   }
@@ -22,4 +22,4 @@ const mapStateToProps = (state, routeParams) => {
 		 };
 };
 
-export default withRouter(connect( mapStateToProps, null )(RegionContainer));
+export default withRouter(connect( mapStateToProps, null )(CentralContainer));
