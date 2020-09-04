@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from "react-router-dom";
+import history from '../Shared/history';
 
 import * as actions from '../../actions';
 import logo from '../../assets/images/logo-acc.png';
 
 const Login = () => {
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    this.props.login();
+  const handleSubmit = () => {
+    // e.preventDefault()
+    // this.props.login();
+    localStorage.setItem('access_token', 'sampletoken')
+    history.push('/dashboard')
   }
 
   return (
@@ -26,7 +28,7 @@ const Login = () => {
             <span className="acc-pre-add-on"><i className="fa fa-lock"></i></span>		
             <input type="password" name="username" placeholder="Password" className="acc-input-form" />
           </div>
-          <Link to="/dashboard" className="acc-btn acc-btn-login transition">Login</Link>
+          <button className="acc-btn acc-btn-login transition" onClick={handleSubmit}>Login</button>
           <span className="forgot-text">Forgot password?</span>
           <p className="copyright">&copy; 2020 ACC. All rights reserved.</p>
         </form>
