@@ -7,6 +7,7 @@ import TextArea from "antd/lib/input/TextArea";
 import uploadcare from 'uploadcare-widget';
 import { PlusOutlined } from "@ant-design/icons";
 
+import { handleSuccess } from '../Shared/Alert';
 import { dataURLtoFile } from './utils';
 // import Uploader from '../Shared/Uploader';
 
@@ -35,9 +36,10 @@ export default class NewPost extends Component {
 
 	handleSubmit = () => {
 		const { title, description } = this.state;
-		localStorage.setItem('title', title)
-		localStorage.setItem('region', true)
-		localStorage.setItem('description', description)
+		localStorage.setItem('title', title);
+		localStorage.setItem('region', true);
+		localStorage.setItem('description', description);
+		handleSuccess('Post published successfully!')
 	}
 
   handleCancel = () => this.setState({ previewVisible: false });

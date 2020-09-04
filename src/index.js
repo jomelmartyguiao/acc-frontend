@@ -9,6 +9,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Router } from 'react-router-dom';
 import "antd/dist/antd.css";
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import fontawesome from './assets/css/font-awesome.min.css';
 import generalStyle from './assets/css/general-style.css';
 import general from './assets/css/general.css';

@@ -19,6 +19,8 @@ import { Footer } from './components/Shared/Footer';
 import NewPage from './components/Page/NewPage';
 import NewPost from './components/Posts/NewPost';
 import NewReading from './components/Readings/NewReading';
+
+import Alert from 'react-s-alert';
 import './App.css';
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
       <PrivateRoute path="/readings" exact component={ReadingsContainer} />
       <PrivateRoute path="/readings/new-reading" exact component={NewReading} />
     </Switch>
+    <Alert stack={true} timeout={4000} />
   </>);
 }
 export default App;
